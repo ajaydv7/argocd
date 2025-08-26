@@ -5,8 +5,11 @@ Open terminal and execute below commands:
 
 
 sudo su -
+
 cd /home/user1/Desktop/
+
 sudo yum install -y socat conntrack
+
 perl toil_script.pl
 
  
