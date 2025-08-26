@@ -1,6 +1,9 @@
 Docker and minikube, Argo CD installation steps and login to argocd
 
 Open terminal and execute below commands:
+
+
+
 sudo su -
 cd /home/user1/Desktop/
 sudo yum install -y socat conntrack
