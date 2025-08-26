@@ -1,5 +1,35 @@
-## What this does?
-This repo along with https://github.com/saha-rajdeep/kubernetescode creates a Jenkins pipeline with GitOps to deploy code into a Kubernetes cluster. CI part is done via Jenkins and CD part via ArgoCD (GitOps).
+Docker and minikube, Argo CD installation steps and login to argocd
 
+Open terminal and execute below commands:
+sudo su -
+cd /home/user1/Desktop/
+sudo yum install -y socat conntrack
+perl toil_script.pl
 
-Please refer to the https://github.com/saha-rajdeep/kubernetescode/blob/main/README.md for the instructions on how to use the codes.
+ 
+ 
+for verifying the status of installation:
+----------------------------------------------
+ 
+systemctl status docker
+minikube status
+kubectl get node
+
+Kubectl create namespace argocd 
+ 
+kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
+ 
+Kubectl get pods -n argocd
+ 
+kubectl get svc -n argocd
+ 
+kubectl edit svc argocd-server -n argocd 
+ 
+minikube service argocd-server -n argocd 
+ 
+kubectl get secret -n argocd
+ 
+kubectl edit secret argocd-initial-admin-secret -n argocd
+ 
+echo UDVUczlis#I0Qmdxc2lsWA== | base64 –decode
+ 
